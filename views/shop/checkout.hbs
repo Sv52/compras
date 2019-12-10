@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-sm-6">
+        <h2>Proceder al Pago</h2>
+        <h4>Total: $ {{total}}</h4>
+        <div id="charge-errors" class="alert alert-danger {{#if noError}}d-none{{/if}}">
+               {{errMsg}} 
+        </div>
+        <form action="/checkout" method="post" id="checkout-form">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" class="form-control" required name="name">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="address">Direccion</label>
+                        <input type="text" id="address" class="form-control" required name="address">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="card-name">Nombre Tarjeta</label>
+                        <input type="text" id="card-name" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="card-number">Numero tarjeta</label>
+                        <input type="text" id="card-number" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="card-expiry-month">Mes de Expiracion</label>
+                        <input type="text" id="card-expiry-month" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="card-expiry-year">Ano de expiracion</label>
+                        <input type="text" id="card-expiry-year" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Comprar</button>
+        </form>
+    </div>
+</div>
+
